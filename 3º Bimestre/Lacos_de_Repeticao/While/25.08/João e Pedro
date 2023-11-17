@@ -1,0 +1,14 @@
+public class alturaJoaoePedro {
+	public static void main(String[] args) {
+		int i=1;
+		double j=134, p=145;
+		while (j<=p) {
+			j= j+2.5;
+			p= p+2;
+			i++;
+		}
+		System.out.println("Demorou "+i+" anos para que Jo�o ficasse maior que Pedro");
+		System.out.println("Altura do Jo�o: "+j+" cm");
+		System.out.println("Altura do Pedro: "+p+" cm");
+	}
+}
