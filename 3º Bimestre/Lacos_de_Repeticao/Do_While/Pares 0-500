@@ -7,6 +7,5 @@ public class ex1_Pares {
 			i= i+2;
 			
 		}while (i<501);
-		
 	}
 }
