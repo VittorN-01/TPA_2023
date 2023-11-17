@@ -13,7 +13,7 @@ public class idade {
 			}else {
 				System.out.println("Menor de Idade");
 			}
-			System.out.println("Deseja continuar: S= Sim, N= Não" );
+			System.out.println("Deseja continuar: S= Sim, N= NÃ£o" );
 			r = ler.next();
 		}while (r.equals("S")|| (r.equals("s")));
 		ler.close();
