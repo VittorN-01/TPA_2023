@@ -5,7 +5,7 @@ public class ex1_Pares {
 		do {
 			System.out.println(i);
 			i= i+2;
-			
+
 		}while (i<501);
 	}
 }
