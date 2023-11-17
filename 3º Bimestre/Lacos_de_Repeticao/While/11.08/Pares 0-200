@@ -1,0 +1,12 @@
+package do_Video;
+
+public class numerosPares {
+	public static void main(String[] args) {
+		int i;
+		i=0;
+		while (i<201) {
+			System.out.println(i);
+			i= i+2;
+		}
+	}
+}

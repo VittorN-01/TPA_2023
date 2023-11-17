@@ -1,0 +1,23 @@
+package do_Video;
+import java.util.Scanner;
+public class idadeMaiorMenor {
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		int i=1;
+		int an,aa,id;
+		while (i<7) {
+			System.out.println("Ano de Nascimento:");
+			an= in.nextInt();
+			System.out.println("Ano Atual:");
+			aa= in.nextInt();
+			id= aa-an;
+			if (id>=18) {
+				System.out.println("Maior de Idade, "+id);
+			}else {
+				System.out.println("Menor de Idade, "+id);
+			}
+		}
+		i= i+1;
+		in.close();
+	}
+}

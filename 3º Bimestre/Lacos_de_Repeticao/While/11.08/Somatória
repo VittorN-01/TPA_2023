@@ -1,0 +1,13 @@
+package do_Video;
+
+public class somaInteiros {
+	public static void main(String[] args) {
+		int t=0;
+		int i=1;
+		while (i<=100) {
+			t=t+i;
+			i++;
+		}
+		System.out.println("A soma é: "+t);
+	}
+}
