@@ -4,25 +4,25 @@ public class Ex4_Bingo {
     public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
         int a[][] = criarCartela();
-        int rodadas = 0;
+        int rodadas = 0, numSorteado;
         Set<Integer> numerosCartela = new HashSet<>();
         
         while (numerosCartela.size() < 16) {
             System.out.print("\nInforme o número sorteado (de 1 a 75) ou digite 0 para encerrar o jogo: ");
-            int numeroSorteado = in.nextInt();
+            numSorteado = in.nextInt();
 
-            if (numeroSorteado == 0) {
+            if (numSorteado == 0) {
                 System.out.println("Jogo encerrado.");
                 return;
             }
 
             rodadas++;
 
-            if (verificarCartela(a, numeroSorteado)) {
-                System.out.println("Você tem o número " + numeroSorteado + " na cartela!");
+            if (verificarCartela(a, numSorteado)) {
+                System.out.println("Você tem o número " + numSorteado + " na cartela!");
                 numerosCartela.add(numeroSorteado);
             } else {
-                System.out.println("Número " + numeroSorteado + " não está na sua cartela.");
+                System.out.println("Número " + numSorteado + " não está na sua cartela.");
             }
         }
         
@@ -35,27 +35,27 @@ public class Ex4_Bingo {
         Random random = new Random();
         int[][] cartela = new int[4][4];
         int n;
-        Set<Integer> numerosUsados = new HashSet<>();
+        Set<Integer> numUsados = new HashSet<>();
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 do {
                     n = random.nextInt(75) + 1;
-                } while (numerosUsados.contains(n));
+                } while (numUsados.contains(n));
 
                 cartela[i][j] = n;
-                numerosUsados.add(n);
+                numUsados.add(n);
             }
         }
 
         return cartela;
     }
 
-    public static boolean verificarCartela(int[][] cartela, int numeroSorteado) {
+    public static boolean verificarCartela(int[][] cartela, int numSorteado) {
         int i, j;
     	for (i = 0; i < 4; i++) {
             for (j = 0; j < 4; j++) {
-                if (cartela[i][j] == numeroSorteado) {
+                if (cartela[i][j] == numSorteado) {
                     return true;
                 }
             }
