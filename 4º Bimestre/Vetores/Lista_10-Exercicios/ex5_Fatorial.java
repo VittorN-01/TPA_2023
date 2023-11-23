@@ -11,7 +11,7 @@ public class ex5_Fatorial {
 
         for (i = 0; i < 3; i++) {
         	fat = 1;
-            System.out.println("Digite o valor do expoente " + (i + 1) + ": ");
+            System.out.println("Digite o valor"+ (i + 1) + " para Fatorar: " );
             a[i] = in.nextInt();
             num = a[i];
             for (j = 1; j <= num; j++) {
